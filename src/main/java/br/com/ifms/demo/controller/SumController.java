@@ -16,13 +16,13 @@ public class SumController {
 
     @GetMapping("/list")
     public String hello() {
-        System.out.println("hello word Baby!");
-        return "hello";
+        System.out.println("hello City Tres lagoas/MS!");
+        return "Hello World!";
     }
 
-    @GetMapping("/{n1}/{n2}")
-    public ResponseEntity< Integer> sum(@PathVariable("n1") Integer n1, @PathVariable("n2") Integer n2) {
-        Somar somar = new Somar(n1, n2);
+    @GetMapping("/{n_1}/{n_2}")
+    public ResponseEntity< Integer> sum(@PathVariable("n_1") Integer n_1, @PathVariable("n_2") Integer n_2) {
+        Somar somar = new Somar(n_1, n_2);
         return ResponseEntity.ok(somar.Getsoma());
     }
 
